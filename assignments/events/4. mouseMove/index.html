@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouse Movement</title>
+</head>
+<body style="border: 1px solid green; padding: 8px;">
+    <h1>Move Mouse Cursor</h1>
+    <p id="screen-x-cord"></p>
+    <p id="screen-y-cord"></p>
+    <p id="client-x-cord"></p>
+    <p id="client-y-cord"></p>
+</body>
+<script>
+    document.body.onmousemove = (e) => {
+        document.getElementById("screen-x-cord").innerHTML = e.screenX;
+        document.getElementById("screen-y-cord").innerHTML = e.screenY;
+        document.getElementById("client-x-cord").innerHTML = e.clientX;
+        document.getElementById("client-y-cord").innerHTML = e.clientY;
+    };
+</script>
+</html>

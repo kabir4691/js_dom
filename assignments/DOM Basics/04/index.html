@@ -13,4 +13,25 @@
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
   </body>
+  <script>
+    
+    document.body.style.fontFamily = "Arial, sans-serif";
+    let spanList = document.getElementsByTagName("span");
+    spanList[0].textContent = "Kabira";
+    spanList[1].textContent = "Main apna favorite hoon";
+    spanList[2].textContent = "Where the heart is";
+
+    Array.from(document.getElementsByTagName("li")).forEach(element => {
+      element.className = "listitem";
+    });
+
+    let styleElement = document.createElement("style");
+    styleElement.type = "text/css";
+    styleElement.innerHTML = ".listitem { color:red; }"
+    document.head.prepend(styleElement);
+
+    let profileImage = document.createElement("img");
+    profileImage.setAttribute("src", "kabir_official.jpg");
+    document.body.append(profileImage);
+  </script>
 </html>
