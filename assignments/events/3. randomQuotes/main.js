@@ -1,10 +1,4 @@
-var quotes;
-
-// Write your code here
-
-
-
-quotes = [
+const quotes = [
     {
         "quoteAuthor": "Thomas Edison",
         "quoteText": "Genius is one percent inspiration and ninety-nine percent perspiration."
@@ -314,3 +308,15 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+function getRandomQuote() { 
+    return quotes[Math.floor(Math.random() * quotes.length)];
+}
+
+document.body.onkeyup = (e) => {
+    if (e.keyCode == 32) {
+        let quote = getRandomQuote();
+        document.getElementById("author").innerHTML = quote.quoteAuthor;
+        document.getElementById("text").innerHTML = quote.quoteText;
+	}
+};

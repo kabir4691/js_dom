@@ -7,10 +7,33 @@
     <title>DOM Basics</title>
   </head>
   <body>
-    <body>
-      <h1>Document Object Model</h1>
+    <h1 id="heading1">Document Object Model</h1>
     <script>
-      // your code goes here
+      let p = document.createElement("p");
+      p.textContent = "Hello Javascript";
+      p.innerHTML += "I love <strong>Javascript</strong>";
+
+      let list = document.createElement("ul");
+
+      let listItem1 = document.createElement("li");
+      listItem1.textContent = "Buy groceries";
+      list.append(listItem1);
+
+      let listItem2 = document.createElement("li");
+      listItem2.textContent = "Feed the cat";
+      list.append(listItem2);
+
+      let listItem3 = document.createElement("li");
+      listItem3.textContent = "Do laundry";
+      list.append(listItem3);
+
+      document.body.append(list);
+
+      let listItem4 = document.createElement("li");
+      listItem4.innerHTML = "Carrom ramwaanu, juice peevanu, majja ni life";
+      list.appendChild(listItem4);
+
+      list.removeChild(listItem4);
     </script>
   </body>
 </html>
